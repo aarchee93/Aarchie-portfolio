@@ -1,0 +1,159 @@
+/* Global styles with handwritten aesthetic */
+:root {
+  font-family: 'Courier New', monospace;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  --light-gray: #F5F5F5;
+  --blue-gray: #B8C5D6;
+  --purple-gray: #A8A2C0;
+  --royal-blue: #2E5BBA;
+  --dark-gray: #5A6670;
+  
+  --primary-color: var(--royal-blue);
+  --secondary-color: var(--purple-gray);
+  --accent-color: var(--blue-gray);
+  --paper-bg: var(--light-gray);
+  --text-color: var(--dark-gray);
+  --grid-color: #e8e8e8;
+  
+  color: var(--text-color);
+  background-color: var(--paper-bg);
+  background-image: 
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.navigation {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.navigation button {
+  background: none;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 8px 16px;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0;
+  position: relative;
+}
+
+.navigation button:hover,
+.navigation button.active {
+  background-color: var(--primary-color);
+  color: var(--paper-bg);
+  box-shadow: 0 0 10px rgba(46, 91, 186, 0.3);
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.handwritten-title {
+  font-family: 'Courier New', monospace;
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 20px 0;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0px var(--accent-color);
+}
+
+.handwritten-subtitle {
+  font-family: 'Courier New', monospace;
+  color: var(--text-color);
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 10px 0;
+  font-weight: normal;
+  text-decoration: underline;
+  text-decoration-color: var(--primary-color);
+}
+/* Minimal Footer */
+.minimal-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.minimal-footer p {
+  font-family: 'Courier New', monospace;
+  color: var(--text-color);
+  font-size: 12px;
+  margin: 0;
+  opacity: 0.7;
+  font-weight: bold;
+}/* Corne
+r Logo */
+.corner-logo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.corner-logo img {
+  width: 40px;
+  height: 40px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.corner-logo img:hover {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .corner-logo {
+    bottom: 15px;
+    right: 15px;
+  }
+  
+  .corner-logo img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .corner-logo {
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .corner-logo img {
+    width: 30px;
+    height: 30px;
+  }
+}

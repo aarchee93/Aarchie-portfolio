@@ -1,0 +1,149 @@
+.about {
+  padding: 40px 20px;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 3px solid var(--primary-color);
+  padding: 40px;
+  background-color: var(--paper-bg);
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 40px;
+  align-items: start;
+  box-shadow: 8px 8px 0px var(--accent-color);
+}
+
+.developer-photo {
+  border: 2px solid var(--primary-color);
+  padding: 10px;
+  box-shadow: 4px 4px 0px var(--accent-color);
+  position: relative;
+}
+
+.photo-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  transform: rotate(-1deg);
+}
+
+/* Paper clip for photo */
+.photo-paper-clip {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  width: 30px;
+  height: auto;
+  z-index: 10;
+  transform: rotate(-15deg);
+}
+
+.developer-info {
+  padding: 0 20px 20px 20px;
+}
+
+.developer-info .handwritten-title {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.developer-info .handwritten-subtitle {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+}
+
+.skills-section {
+  margin-top: 30px;
+}
+
+.skills-title {
+  font-family: 'Courier New', monospace;
+  color: var(--primary-color);
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-tag {
+  background-color: var(--secondary-color);
+  color: var(--paper-bg);
+  padding: 5px 12px;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  border: 1px solid var(--primary-color);
+}
+
+.cv-download-button {
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--paper-bg);
+  padding: 10px 20px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 25px;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%);
+}
+
+.cv-download-button:hover {
+  background-color: var(--secondary-color);
+  transform: translateX(3px);
+  box-shadow: -3px 3px 10px rgba(46, 91, 186, 0.3);
+}
+
+.cv-download-button:active {
+  transform: translateX(1px);
+  box-shadow: -1px 1px 5px rgba(46, 91, 186, 0.2);
+}
+
+.bio-text {
+  font-family: 'Courier New', monospace;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.bio-text p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 20px;
+  }
+  
+  .developer-photo {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  
+  .photo-paper-clip {
+    width: 25px;
+    top: -12px;
+    left: 15px;
+    transform: rotate(-12deg);
+  }
+  
+  .developer-info .handwritten-title {
+    text-align: center;
+  }
+}

@@ -1,0 +1,230 @@
+.contact {
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-container {
+  text-align: center;
+}
+
+.contact-form-frame {
+  border: 3px solid var(--primary-color);
+  padding: 40px;
+  background-color: white;
+  margin-top: 30px;
+  box-shadow: 8px 8px 0px var(--accent-color);
+  transform: rotate(-1.5deg);
+  transform-origin: center center;
+  position: relative;
+  
+  /* Paper texture */
+  background-image: 
+    repeating-linear-gradient(
+      transparent,
+      transparent 24px,
+      #e8e8e8 24px,
+      #e8e8e8 25px
+    );
+  background-size: 100% 25px;
+}
+
+/* Paper clip image for contact */
+.contact .paper-clip {
+  position: absolute;
+  top: -20px;
+  right: 40px;
+  width: 35px;
+  height: auto;
+  z-index: 10;
+  transform: rotate(15deg);
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.handwritten-label {
+  display: block;
+  font-family: 'Courier New', monospace;
+  color: var(--primary-color);
+  font-size: 16px;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--primary-color);
+  background-color: var(--paper-bg);
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(46, 91, 186, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-button {
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--paper-bg);
+  padding: 14px 28px;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 25px;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 50%, calc(100% - 15px) 100%, 0 100%);
+}
+
+.submit-button:hover {
+  background-color: var(--secondary-color);
+  transform: translateX(5px);
+  box-shadow: -5px 5px 15px rgba(46, 91, 186, 0.3);
+}
+
+.submit-button:active {
+  transform: translateX(2px);
+  box-shadow: -2px 2px 8px rgba(46, 91, 186, 0.2);
+}
+
+@media (max-width: 768px) {
+  .contact-form-frame {
+    padding: 25px;
+    transform: rotate(-1deg);
+  }
+  
+  .contact .paper-clip {
+    width: 30px;
+    top: -15px;
+    right: 30px;
+    transform: rotate(12deg);
+  }
+  
+  .contact-form {
+    max-width: 100%;
+  }
+  
+  .submit-button {
+    padding: 12px 25px;
+    font-size: 14px;
+  }
+}@me
+dia (max-width: 480px) {
+  .contact-form-frame {
+    transform: rotate(-0.5deg);
+    padding: 20px;
+  }
+  
+  .contact .paper-clip {
+    width: 25px;
+    top: -12px;
+    right: 25px;
+    transform: rotate(10deg);
+  }
+}/* Co
+ntact info section */
+.contact-info {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--accent-color);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.contact-icon {
+  font-size: 1.2rem;
+  width: 25px;
+  text-align: center;
+}
+
+.contact-link {
+  font-family: 'Courier New', monospace;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+.contact-socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.social-icon {
+  font-family: 'Courier New', monospace;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border: 1px solid var(--primary-color);
+  transition: all 0.3s ease;
+  background: none;
+}
+
+.social-icon:hover {
+  background-color: var(--primary-color);
+  color: var(--paper-bg);
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .contact-link {
+    font-size: 13px;
+  }
+  
+  .contact-socials {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .social-icon {
+    text-align: center;
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}
