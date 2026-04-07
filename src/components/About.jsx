@@ -42,7 +42,7 @@ function About() {
 
             <button 
               className="cv-download-button"
-              onClick={() => window.open('https://aarchiewrites.notion.site/Aarchee-Kalsariya-2974b7df295380f2a139d22a164e2622', '_blank', 'noopener,noreferrer')}
+              onClick={() => window.open('https://drive.google.com/file/d/1l89choW_lzSP8vgm30wqUHfPO_bZcLek/view?usp=sharing', '_blank', 'noopener,noreferrer')}
             >
               See My Resume
             </button>

@@ -33,6 +33,17 @@ function Writing() {
 
   const researchPapers = [
     {
+      id: 2,
+      title: "Predicting Statistical Properties of Chaotic Systems Beyond the Deterministic Horizon",
+      authors: "Aarchie Kalsariya",
+      journal: "Mini Research Project",
+      year: "2025",
+      abstract: "A mini research project exploring machine learning approaches to predict statistical properties of chaotic systems beyond the deterministic horizon, where traditional forecasting methods break down.",
+      tags: ["Chaos Theory", "Machine Learning", "Dynamical Systems", "Statistical Prediction"],
+      status: "Completed",
+      link: "https://drive.google.com/file/d/13zzRhsIGEQb0JQg5lsDFe-TCSUzNe-YH/view"
+    },
+    {
       id: 1,
       title: "X-FED: An Explainable Federated Hybrid IDS for Smart SOC",
       authors: "Aarchie Kalsariya",
@@ -114,7 +125,7 @@ function Writing() {
                 <div className="paper-content">
                   <div className="paper-header">
                     <h3 className="paper-title">{paper.title}</h3>
-                    <span className={`status-badge accepted`}>
+                    <span className={`status-badge ${paper.status === 'Accepted for Presentation' ? 'accepted' : 'completed'}`}>
                       {paper.status}
                     </span>
                   </div>

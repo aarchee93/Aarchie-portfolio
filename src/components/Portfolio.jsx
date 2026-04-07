@@ -22,6 +22,15 @@ function Portfolio() {
       isClient: false
     },
     { 
+      id: 4, 
+      title: "Predicting Statistical Properties of Chaotic Systems", 
+      description: "Research project focused on predicting statistical properties of chaotic systems beyond the deterministic horizon, exploring machine learning approaches to model long-term behavior where traditional methods break down.",
+      technologies: ["Python", "Machine Learning", "Chaos Theory", "Data Science"],
+      status: "Completed",
+      link: "https://github.com/aarchee93/Predicting-Statistical-Properties-of-Chaotic-Systems-Beyond-the-Deterministic-Horizon",
+      isClient: false
+    },
+    { 
       id: 3, 
       title: "Portfolio Website", 
       description: "Modern, responsive portfolio website showcasing projects and experience with interactive elements, tilted page effects, and handwritten aesthetic design.",
@@ -69,7 +78,7 @@ function Portfolio() {
                 className="project-link"
                 onClick={() => handleProjectClick(project.link)}
               >
-                View Live Project
+                {project.link.includes('github.com') ? 'View on GitHub' : 'View Live Project'}
               </button>
             </div>
           </div>
